@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2930F126D8B13C00D8E794 /* HoffmanPhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2930F026D8B13C00D8E794 /* HoffmanPhaseModel.swift */; };
+		3D2930F326D8B18A00D8E794 /* HoffmanPhaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2930F226D8B18A00D8E794 /* HoffmanPhaseRow.swift */; };
+		3D55B10A26D6373A0011B02F /* HoffmanTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D55B10926D6373A0011B02F /* HoffmanTimerView.swift */; };
+		3D8E1F7826E7872100456598 /* HoffmanStageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E1F7726E7872100456598 /* HoffmanStageManager.swift */; };
+		3DA8558726F63D1000D9AB9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA8558626F63D1000D9AB9F /* LaunchScreen.storyboard */; };
 		3DFCA25E26D507860021AA9A /* brewtimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCA25D26D507860021AA9A /* brewtimerApp.swift */; };
 		3DFCA26026D507860021AA9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCA25F26D507860021AA9A /* ContentView.swift */; };
 		3DFCA26226D507860021AA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFCA26126D507860021AA9A /* Assets.xcassets */; };
 		3DFCA26526D507860021AA9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFCA26426D507860021AA9A /* Preview Assets.xcassets */; };
 		3DFCA27026D507860021AA9A /* brewtimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCA26F26D507860021AA9A /* brewtimerTests.swift */; };
 		3DFCA27B26D507860021AA9A /* brewtimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCA27A26D507860021AA9A /* brewtimerUITests.swift */; };
+		3DFCA28926D631A80021AA9A /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCA28826D631A80021AA9A /* StopwatchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2930F026D8B13C00D8E794 /* HoffmanPhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoffmanPhaseModel.swift; sourceTree = "<group>"; };
+		3D2930F226D8B18A00D8E794 /* HoffmanPhaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoffmanPhaseRow.swift; sourceTree = "<group>"; };
+		3D55B10926D6373A0011B02F /* HoffmanTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoffmanTimerView.swift; sourceTree = "<group>"; };
+		3D8E1F7726E7872100456598 /* HoffmanStageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoffmanStageManager.swift; sourceTree = "<group>"; };
+		3DA8558626F63D1000D9AB9F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DFCA25A26D507860021AA9A /* brewtimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brewtimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCA25D26D507860021AA9A /* brewtimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brewtimerApp.swift; sourceTree = "<group>"; };
 		3DFCA25F26D507860021AA9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +56,7 @@
 		3DFCA27626D507860021AA9A /* brewtimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brewtimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCA27A26D507860021AA9A /* brewtimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brewtimerUITests.swift; sourceTree = "<group>"; };
 		3DFCA27C26D507860021AA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DFCA28826D631A80021AA9A /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D55B10D26D638910011B02F /* hoffman */ = {
+			isa = PBXGroup;
+			children = (
+				3D55B10926D6373A0011B02F /* HoffmanTimerView.swift */,
+				3D2930F026D8B13C00D8E794 /* HoffmanPhaseModel.swift */,
+				3D2930F226D8B18A00D8E794 /* HoffmanPhaseRow.swift */,
+				3D8E1F7726E7872100456598 /* HoffmanStageManager.swift */,
+			);
+			path = hoffman;
+			sourceTree = "<group>";
+		};
 		3DFCA25126D507860021AA9A = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +118,14 @@
 		3DFCA25C26D507860021AA9A /* brewtimer */ = {
 			isa = PBXGroup;
 			children = (
+				3D55B10D26D638910011B02F /* hoffman */,
 				3DFCA25D26D507860021AA9A /* brewtimerApp.swift */,
 				3DFCA25F26D507860021AA9A /* ContentView.swift */,
 				3DFCA26126D507860021AA9A /* Assets.xcassets */,
 				3DFCA26626D507860021AA9A /* Info.plist */,
 				3DFCA26326D507860021AA9A /* Preview Content */,
+				3DFCA28826D631A80021AA9A /* StopwatchManager.swift */,
+				3DA8558626F63D1000D9AB9F /* LaunchScreen.storyboard */,
 			);
 			path = brewtimer;
 			sourceTree = "<group>";
@@ -233,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA8558726F63D1000D9AB9F /* LaunchScreen.storyboard in Resources */,
 				3DFCA26526D507860021AA9A /* Preview Assets.xcassets in Resources */,
 				3DFCA26226D507860021AA9A /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2930F326D8B18A00D8E794 /* HoffmanPhaseRow.swift in Sources */,
+				3D55B10A26D6373A0011B02F /* HoffmanTimerView.swift in Sources */,
 				3DFCA26026D507860021AA9A /* ContentView.swift in Sources */,
+				3D2930F126D8B13C00D8E794 /* HoffmanPhaseModel.swift in Sources */,
 				3DFCA25E26D507860021AA9A /* brewtimerApp.swift in Sources */,
+				3D8E1F7826E7872100456598 /* HoffmanStageManager.swift in Sources */,
+				3DFCA28926D631A80021AA9A /* StopwatchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
