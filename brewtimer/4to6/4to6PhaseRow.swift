@@ -8,19 +8,22 @@
 import SwiftUI
 
 
-let fontSize: CGFloat = 48
 
-struct HoffmanPhaseRow: View {
+struct FourToSixPhaseRow: View {
+    let fontSize: CGFloat = 36
+    
     let model: PhaseModel
     let currentSeconds: Double
     let status: HoffmanPhaseStatus
-    let textFont = Font.system(size: fontSize, weight: .light)
-    let secondsFont = Font.system(size: fontSize, weight: .light)
+    let textFont: Font
+    let secondsFont: Font
     
     init(phase model: PhaseModel, currentSeconds: Double, status: HoffmanPhaseStatus) {
         self.model = model
         self.currentSeconds = currentSeconds
         self.status = status
+        self.textFont = Font.system(size: fontSize, weight: .light)
+        self.secondsFont = Font.system(size: fontSize, weight: .light)
     }
     
     var body: some View {
@@ -59,7 +62,7 @@ struct HoffmanPhaseRow: View {
     }
 }
 
-struct HoffmanPhaseRow_Previews: PreviewProvider {
+struct FourToSixPhaseRow_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             HoffmanPhaseRow(

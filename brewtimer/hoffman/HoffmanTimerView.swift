@@ -9,15 +9,15 @@ import SwiftUI
 import Combine
 
 let allPhases = [
-    HoffmanPhaseModel(name: "ready?", fromSeconds: -5, toSeconds: 0, stage: 0),
-    HoffmanPhaseModel(name: "blooming", fromSeconds: 0.0, toSeconds: 30.0, stage: 1),
-    HoffmanPhaseModel(name: "strength", fromSeconds: 30, toSeconds: 75, stage: 2),
-    HoffmanPhaseModel(name: "end", fromSeconds: 75, toSeconds: 180, stage: 3, endless: true)
+    PhaseModel(name: "ready?", fromSeconds: -5, toSeconds: 0, stage: 0),
+    PhaseModel(name: "blooming", fromSeconds: 0.0, toSeconds: 30.0, stage: 1),
+    PhaseModel(name: "strength", fromSeconds: 30, toSeconds: 75, stage: 2),
+    PhaseModel(name: "end", fromSeconds: 75, toSeconds: 180, stage: 3, endless: true)
 ]
 
 struct HoffmanTimerView: View {
-    @ObservedObject var stageManager = HoffmanStageManager(allPhases)
-    let phases: [HoffmanPhaseModel]
+    @ObservedObject var stageManager = StageManager(allPhases)
+    let phases: [PhaseModel]
     
     init() {
         self.phases = allPhases
@@ -40,10 +40,8 @@ struct HoffmanTimerView: View {
             if !self.stageManager.isRunning {
                 Button(action: self.stageManager.start) {
                     Text("Brew").font(.title)
-                }.frame(width: 180, height: 180)
-                .foregroundColor(Color("brand"))
-                .background(Color("darkgray"))
-                .clipShape(Circle())
+                }.buttonStyle(StartButtonStyle())
+                
             }
             
             Spacer()

@@ -8,14 +8,14 @@
 import Foundation
 import Combine
 
-class HoffmanStageManager: ObservableObject {
-    let phases: [HoffmanPhaseModel]
+class StageManager: ObservableObject {
+    let phases: [PhaseModel]
     var stopwatch = StopwatchManager(-5)
     var bag = Set<AnyCancellable>()
     @Published var isRunning = false
     @Published var stage = 0
     
-    init(_ phases: [HoffmanPhaseModel]) {
+    init(_ phases: [PhaseModel]) {
         self.phases = phases
         self.stopwatch.$secondsElapsed.sink(receiveValue: updateStage).store(in: &self.bag)
     }
@@ -38,9 +38,8 @@ class HoffmanStageManager: ObservableObject {
 
     
     func updateStage(_ curSeconds: Double) {
-   
         if let phase = self.phases.first(where: { phase in
-            return phase.endless || phase.fromSeconds <= curSeconds && phase.toSeconds > curSeconds
+            return phase.endless || (phase.fromSeconds <= curSeconds && phase.toSeconds > curSeconds)
         }) {
             self.stage = phase.stage
         }

@@ -15,7 +15,7 @@ enum HoffmanPhaseStatus {
     case far
 }
 
-struct HoffmanPhaseModel: Identifiable {
+struct PhaseModel: Identifiable {
     var id: String
     let name: String
     let fromSeconds: Double

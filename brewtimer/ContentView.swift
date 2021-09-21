@@ -14,7 +14,22 @@ struct ContentView: View {
         ZStack {
             Color("gray6")
                 .edgesIgnoringSafeArea(.all)
-            HoffmanTimerView().padding()
+            TabView {
+                HoffmanTimerView()
+                    .tabItem({
+                        Text("H")
+                        Text("Hoffman")
+                        
+                    })
+                    .padding()
+                FourToSixTimerView()
+                    .tabItem({
+                                Text("4:6")
+                                Text("4:6")
+                        
+                    })
+                    .padding()
+            }
         }.preferredColorScheme(.dark)
         
     }
