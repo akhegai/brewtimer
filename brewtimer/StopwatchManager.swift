@@ -19,7 +19,7 @@ class StopwatchManager: ObservableObject {
     }
 
     func start() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.secondsElapsed += 1
         }
     }

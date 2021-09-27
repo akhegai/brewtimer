@@ -17,6 +17,7 @@ let allPhases = [
 
 struct HoffmanTimerView: View {
     @ObservedObject var stageManager = StageManager(allPhases)
+    @State() var gram: Int = 15
     let phases: [PhaseModel]
     
     init() {
@@ -26,6 +27,7 @@ struct HoffmanTimerView: View {
     
     var body: some View {
         VStack {
+            Text("\(gram)g").font(.title)
             Spacer()
             VStack(spacing: 10) {
                 ForEach(self.phases) { phase in
@@ -37,13 +39,20 @@ struct HoffmanTimerView: View {
                 }
             }
             Spacer()
+            
             if !self.stageManager.isRunning {
-                Button(action: self.stageManager.start) {
-                    Text("Brew").font(.title)
-                }.buttonStyle(StartButtonStyle())
+                HStack(alignment: .top) {
+                    Spacer()
+                    Button(action: self.stageManager.start) {
+                        Text("Brew").font(.title)
+                    }.buttonStyle(StartButtonStyle())
+                    Spacer()
+                    DosePicker(selected: $gram, grams: [15, 18, 20])
+                }
+             
                 
             }
-            
+           
             Spacer()
         }
     }
