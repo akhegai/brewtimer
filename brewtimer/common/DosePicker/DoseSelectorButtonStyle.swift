@@ -26,5 +26,6 @@ struct DoseSelectorButtonStyle: ButtonStyle {
                 Capsule(style: .continuous)
                     .stroke(!isActive ? .gray : Color("brand"))
             )
+            .animation(.easeIn(duration: 0.2))
     }
 }
